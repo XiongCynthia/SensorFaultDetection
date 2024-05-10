@@ -16,14 +16,8 @@ We use machine learning clustering algorithms to predict anomalous data, specifi
 
 We then try a different procedure: we add an intermediary step in the pipeline where we fit another model on the data, with the previous values as the input data $X$ and the current values as the targets $y$. Then, we use the model's predictions of all the feature data along with their associated actual values to predict anomalous data. We use a statistical time series model, the autoregressive moving-average (ARMA) model (where the targets are the endogenous values and the input data the exogenous values); machine learning regressors, using random forest, gradient boosting, and k-nearest neighbors algorithms; and deep learning models, which are a simple recurrent neural network (RNN), a long short-term memory (LSTM) network, and a gated recurrent unit (GRU) network.
 
-```mermaid
-flowchart TD
-    Start[Generate feature data] --> A[Predict anomalies \n with clustering]
-    Start --> B[Fit model on data \n and generate predictions]
-    B --> |Predicted and \n actual values| A
-    B --> |Residuals| C[Predict anomalies \n with statisical methods]
-```
+![Flowchart of procedures](flowchart.png)
 
 ### Example: A Result with Random Forest Regressor + K-Means Clustering
 
-![alt text](example.png)
+![Example result with random forest regressor and k-means clustering](example.png)
