@@ -117,7 +117,7 @@ In conclusion, our study provides valuable insights into anomaly detection metho
 
 ## References
 
-<h4 style="font-weight: normal">[1] Nicoomanesh, A. (2020). Sensor Fault Detection Data [Dataset]. Schneider-Electric. https://www.kaggle.com/datasets/arashnic/sensor-fault-detection-data</h4>
+<h4 style="font-weight: normal">[1] Möbius (2020). Sensor Fault Detection Data [Dataset]. Schneider-Electric. https://www.kaggle.com/datasets/arashnic/sensor-fault-detection-data</h4>
 
 <h4 style="font-weight: normal">[2] Dong, H., Wang, Z., Ding, S., & Gao, H. (2014). A survey on distributed filtering and fault detection for sensor networks. Mathematical Problems in Engineering, 2014, 1-7. https://doi.org/10.1155/2014/858624</h4>
 
