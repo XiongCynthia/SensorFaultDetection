@@ -81,18 +81,18 @@ The table shown below displays a quick summary of our research findings on our s
 
 | | Z-Score | Tukey | Isolation Forest | K-Means | DBSCAN |
 |-|-|-|-|-|-|
-| ARMA			| :heavy_check_mark: | :heavy_check_mark: | :x:PREC		| :heavy_check_mark: | :heavy_check_mark:*	|
-| Random Forest		| :heavy_check_mark: | :heavy_check_mark: | :x:PREC, ACC, CONS	| :heavy_check_mark: | :heavy_check_mark:*	|
-| Gradient Boosted	| :heavy_check_mark: | :heavy_check_mark: | :x:PREC, ACC, CONS	| :heavy_check_mark: | :heavy_check_mark:*	|
-| K-Nearest Neighbors	| :heavy_check_mark: | :heavy_check_mark: | :x:PREC, ACC, CONS	| :heavy_check_mark: | :heavy_check_mark:	|
-| Simple RNN		| :heavy_check_mark: | :heavy_check_mark: | :x:PREC, ACC, CONS	| :heavy_check_mark: | :heavy_check_mark:*	|
-| LSTM			| :heavy_check_mark: | :heavy_check_mark: | :x:PREC, ACC, CONS	| :heavy_check_mark: | :heavy_check_mark:*	|
-| GRU			| :heavy_check_mark: | :heavy_check_mark: | :x:PREC, ACC, CONS	| :heavy_check_mark: | :heavy_check_mark:	|
+| ARMA			| ✔️ | ✔️ | ❌PREC		| ✔️ | ✔️*	|
+| Random Forest		| ✔️ | ✔️ | ❌PREC, ACC, CONS	| ✔️ | ✔️*	|
+| Gradient Boosted	| ✔️ | ✔️ | ❌PREC, ACC, CONS	| ✔️ | ✔️*	|
+| K-Nearest Neighbors	| ✔️ | ✔️ | ❌PREC, ACC, CONS	| ✔️ | ✔️	|
+| Simple RNN		| ✔️ | ✔️ | ❌PREC, ACC, CONS	| ✔️ | ✔️*	|
+| LSTM			| ✔️ | ✔️ | ❌PREC, ACC, CONS	| ✔️ | ✔️*	|
+| GRU			| ✔️ | ✔️ | ❌PREC, ACC, CONS	| ✔️ | ✔️	|
 
-:heavy_check_mark:: Acceptable results  
-:x:PREC: Bad precision  
-:x:ACC: Bad accuracy  
-:x:CONS: Bad consistency  
+✔️: Acceptable results  
+❌PREC: Bad precision  
+❌ACC: Bad accuracy  
+❌CONS: Bad consistency  
 *Altered approach (read more below)
 
 The window length used to generate the feature data is different for some pipelines. Those that used the ARMA model had 0, the regression models had 10, and the deep learning models had 10.
