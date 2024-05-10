@@ -64,11 +64,11 @@ Here are the main takeaways from our analysis for the dataset and models we used
 
  2. The most universally effective approach is fitting one of the models used in the project on the data, then applying the z-test or Tukey’s method on residuals or k-means clustering on predicted and actual values
 
- 3. Isolation forest for anomaly detection is consistently unreliable
+ 3. Using DBSCAN to predict anomalies is effective when a cluster size threshold for determining anomaly clusters is used
+
+ 4. Isolation forest for anomaly detection is consistently unreliable
 	- Often returns varying results
 	- May not correctly predict all anomalies
-
- 4. Using DBSCAN to predict anomalies with GRUs is effective
 
 Because the sensor dataset we used had wildly inconsistent time intervals between values, we were unable to train an ARMA model that could be used for forecasting. Further research could look into how an ARMA model trained entirely on non-anomalous data can perform.
 
@@ -81,13 +81,13 @@ The table shown below displays a quick summary of our research findings on our s
 
 | | Z-Score | Tukey | Isolation Forest | K-Means | DBSCAN |
 |-|-|-|-|-|-|
-| ARMA | :heavy_check_mark: | :heavy_check_mark: | :x:PREC| :heavy_check_mark: | :heavy_check_mark:* |
-| Random Forest | :heavy_check_mark: | :heavy_check_mark: | :x:PREC, ACC, CONS | :heavy_check_mark: | :heavy_check_mark:* |
-| Gradient Boosted | :heavy_check_mark: | :heavy_check_mark: | :x:PREC, ACC, CONS | :heavy_check_mark: | :heavy_check_mark:* |
-| K-Nearest Neighbors | :heavy_check_mark: | :heavy_check_mark: | :x:PREC, ACC, CONS | :heavy_check_mark: | :heavy_check_mark: |
-| Simple RNN | :heavy_check_mark: | :heavy_check_mark: | :x:PREC, ACC, CONS | :heavy_check_mark: | :heavy_check_mark:* |
-| LSTM | :heavy_check_mark: | :heavy_check_mark: | :x:PREC, ACC, CONS| :heavy_check_mark: | :heavy_check_mark:* |
-| GRU | :heavy_check_mark: | :heavy_check_mark: | :x:PREC, ACC, CONS| :heavy_check_mark: | :heavy_check_mark: |
+| ARMA			| :heavy_check_mark: | :heavy_check_mark: | :x:PREC		| :heavy_check_mark: | :heavy_check_mark:*	|
+| Random Forest		| :heavy_check_mark: | :heavy_check_mark: | :x:PREC, ACC, CONS	| :heavy_check_mark: | :heavy_check_mark:*	|
+| Gradient Boosted	| :heavy_check_mark: | :heavy_check_mark: | :x:PREC, ACC, CONS	| :heavy_check_mark: | :heavy_check_mark:*	|
+| K-Nearest Neighbors	| :heavy_check_mark: | :heavy_check_mark: | :x:PREC, ACC, CONS	| :heavy_check_mark: | :heavy_check_mark:	|
+| Simple RNN		| :heavy_check_mark: | :heavy_check_mark: | :x:PREC, ACC, CONS	| :heavy_check_mark: | :heavy_check_mark:*	|
+| LSTM			| :heavy_check_mark: | :heavy_check_mark: | :x:PREC, ACC, CONS	| :heavy_check_mark: | :heavy_check_mark:*	|
+| GRU			| :heavy_check_mark: | :heavy_check_mark: | :x:PREC, ACC, CONS	| :heavy_check_mark: | :heavy_check_mark:	|
 
 :heavy_check_mark:: Acceptable results  
 :x:PREC: Bad precision  
