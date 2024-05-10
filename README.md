@@ -12,7 +12,7 @@ Through extensive experimentation and comparative analysis on real-world sensor 
 
 ### Brief Overview of Methods
 
-To give more information to our predictive models, each value has been attached its preceding values from within a "window" of set length. That is, given a window of length $n$, each value $y$ at time $t$ is associated with $y_{t-1}, y_{t-2}, …, y_{t-n}$. This form of new feature data is used as inputs from which our models derive insights.
+To give more information to our predictive models, each value has been attached its preceding values from within a "window" of set length. This feature data is used as inputs from which our models derive insights.
 
 We use machine learning clustering algorithms to predict anomalous data, specifically isolation forest, k-means clustering, and density-based spatial clustering of applications with noise (DBSCAN). These models are fed the new feature data, then have the smallest cluster of values be labelled as anomalous. In an altered version of this approach, values are labelled as anomalous if the cluster they are in is smaller than a set threshold.
 
