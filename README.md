@@ -9,9 +9,9 @@ Through extensive experimentation and comparative analysis on real-world sensor 
 
 ## Introduction
 
-Sensor fault detection is a crucial aspect of ensuring the reliability and accuracy of data collected by sensors. Various methodologies have been proposed to address sensor faults in different systems. One approach involves utilizing physics-informed machine learning techniques such as Dynamic Mode Decomposition (DMD) to enhance fault detection capabilities. Additionally, Extended Kalman Filters (EKF) have been suggested for handling nonlinear models effectively, where the EKF estimates the state and compares observed deviations to expected process noise ranges to identify anomalous sensor behavior [[2]](https://github.com/XiongCynthia/SensorFaultDetection/edit/main/README.md#2-dong-h-wang-z-ding-s--gao-h-2014-a-survey-on-distributed-filtering-and-fault-detection-for-sensor-networks-mathematical-problems-in-engineering-2014-1-7-httpsdoiorg1011552014858624).
+Sensor fault detection is a crucial aspect of ensuring the reliability and accuracy of data collected by sensors. Various methodologies have been proposed to address sensor faults in different systems. One approach involves utilizing physics-informed machine learning techniques such as Dynamic Mode Decomposition (DMD) to enhance fault detection capabilities. Additionally, Extended Kalman Filters (EKF) have been suggested for handling nonlinear models effectively, where the EKF estimates the state and compares observed deviations to expected process noise ranges to identify anomalous sensor behavior [[2]](https://github.com/XiongCynthia/SensorFaultDetection/tree/main#references).
 
-In scenarios where engineering expertise and heuristics are employed for anomaly identification, the use of redundant measurements and sensor fusion schemes is essential for achieving fault tolerance [[3]](https://github.com/XiongCynthia/SensorFaultDetection/edit/main/README.md#3-odgaard-p-stoustrup-j--kinnaert-m-2009-fault-tolerant-control-of-wind-turbines--a-benchmark-model-ifac-proceedings-volumes-428-155-160-httpsdoiorg10318220090630-4-es-200300026). Furthermore, the integration of system identification algorithms like DMD can aid in developing predictive sensor models, thereby improving fault detection mechanisms. By incorporating nonlinear state functions through methods like Extended DMD or Koopman Mode Decomposition, models can be refined for accurate full-state estimation and sensor fault detection.
+In scenarios where engineering expertise and heuristics are employed for anomaly identification, the use of redundant measurements and sensor fusion schemes is essential for achieving fault tolerance [[3]](https://github.com/XiongCynthia/SensorFaultDetection/tree/main#references). Furthermore, the integration of system identification algorithms like DMD can aid in developing predictive sensor models, thereby improving fault detection mechanisms. By incorporating nonlinear state functions through methods like Extended DMD or Koopman Mode Decomposition, models can be refined for accurate full-state estimation and sensor fault detection.
 
 Moreover, fault detection in sensor networks has been explored through distributed filtering and fault detection techniques. These methods utilize statistical approaches to identify sensors that are likely to be faulty, enhancing the overall fault detection process in sensor networks. Additionally, fault detection schemes based on parity equations and unknown input observers have been proposed for detecting sensor faults in wind turbines and other systems.
 
@@ -31,7 +31,7 @@ We define anomalies as large deviations from the rest of the data. Out of the 62
 
 The timestamps in the data are not consistently spaced apart. Earlier timestamps are in 1-hour intervals, but by the end, they are in 5-minute intervals. There are many gaps in between due to sensor disconnection or failure, though particularly large gaps (up to 21 days) are scarce.
 
-This dataset is free to the public on Kaggle and is licensed under Open Database License (ODbL) v1.0 [[1]](https://github.com/XiongCynthia/SensorFaultDetection/edit/main/README.md#1-nicoomanesh-a-2020-sensor-fault-detection-data-dataset-schneider-electric-httpswwwkagglecomdatasetsarashnicsensor-fault-detection-data).
+This dataset is free to the public on Kaggle and is licensed under Open Database License (ODbL) v1.0 [[1]](https://github.com/XiongCynthia/SensorFaultDetection/tree/main#references).
 
 
 ## Methods
@@ -117,8 +117,8 @@ In conclusion, our study provides valuable insights into anomaly detection metho
 
 ## References
 
-<h4 style="font-weight: normal">[1] Möbius (2020). Sensor Fault Detection Data [Dataset]. Schneider-Electric. https://www.kaggle.com/datasets/arashnic/sensor-fault-detection-data</h4>
+[1] Möbius (2020). Sensor Fault Detection Data [Dataset]. Schneider-Electric. https://www.kaggle.com/datasets/arashnic/sensor-fault-detection-data
 
-<h4 style="font-weight: normal">[2] Dong, H., Wang, Z., Ding, S., & Gao, H. (2014). A survey on distributed filtering and fault detection for sensor networks. Mathematical Problems in Engineering, 2014, 1-7. https://doi.org/10.1155/2014/858624</h4>
+[2] Dong, H., Wang, Z., Ding, S., & Gao, H. (2014). A survey on distributed filtering and fault detection for sensor networks. Mathematical Problems in Engineering, 2014, 1-7. https://doi.org/10.1155/2014/858624
 
-<h4 style="font-weight: normal">[3] Odgaard, P., Stoustrup, J., & Kinnaert, M. (2009). Fault tolerant control of wind turbines – a benchmark model. Ifac Proceedings Volumes, 42(8), 155-160. https://doi.org/10.3182/20090630-4-es-2003.00026</h4>
+[3] Odgaard, P., Stoustrup, J., & Kinnaert, M. (2009). Fault tolerant control of wind turbines – a benchmark model. Ifac Proceedings Volumes, 42(8), 155-160. https://doi.org/10.3182/20090630-4-es-2003.00026
