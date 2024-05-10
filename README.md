@@ -9,13 +9,19 @@ Through extensive experimentation and comparative analysis on real-world sensor 
 
 ## Introduction
 
-Sensor fault detection is a crucial aspect of ensuring the reliability and accuracy of data collected by sensors. Various methodologies have been proposed to address sensor faults in different systems. One approach involves utilizing physics-informed machine learning techniques such as Dynamic Mode Decomposition (DMD) to enhance fault detection capabilities. Additionally, Extended Kalman Filters (EKF) have been suggested for handling nonlinear models effectively, where the EKF estimates the state and compares observed deviations to expected process noise ranges to identify anomalous sensor behavior [[2]](https://github.com/XiongCynthia/SensorFaultDetection/tree/main#references).
+Sensor fault detection is a crucial aspect of ensuring the reliability and accuracy of sensor networks. It involves identifying anomalies or faults in sensor data that may arise due to various reasons such as sensor malfunctions, environmental factors, or communication errors. De Silva et al. stress the importance of robust fault detection in sensor networks to enhance performance and reduce environmental impact (de Silva et al., 2020). Dong et al. highlight the increasing research interest in fault detection for sensor networks due to the growing demand for higher performance, safety, and reliability standards (Dong et al., 2014).
 
-In scenarios where engineering expertise and heuristics are employed for anomaly identification, the use of redundant measurements and sensor fusion schemes is essential for achieving fault tolerance [[3]](https://github.com/XiongCynthia/SensorFaultDetection/tree/main#references). Furthermore, the integration of system identification algorithms like DMD can aid in developing predictive sensor models, thereby improving fault detection mechanisms. By incorporating nonlinear state functions through methods like Extended DMD or Koopman Mode Decomposition, models can be refined for accurate full-state estimation and sensor fault detection.
+One common method involves utilizing symptom signals, pattern recognition, or analyzing the contributions of sensors to process models to detect sensor faults (Brunner et al., 2021). Additionally, researchers have explored the use of Convolutional Neural Networks (CNNs) for fault detection in aero-engine sensors, emphasizing the importance of detecting and isolating sensor faults to enhance system reliability (Du et al., 2022).
 
-Moreover, fault detection in sensor networks has been explored through distributed filtering and fault detection techniques. These methods utilize statistical approaches to identify sensors that are likely to be faulty, enhancing the overall fault detection process in sensor networks. Additionally, fault detection schemes based on parity equations and unknown input observers have been proposed for detecting sensor faults in wind turbines and other systems.
+In the realm of wireless sensor networks (WSNs), distributed fault detection schemes have been developed to capitalize on the spatial correlations of sensor measurements for fault detection (Dong et al., 2014). These schemes aim to enhance fault detection accuracy and efficiency in large-scale sensor networks. Furthermore, fault detection methods based on credibility and cooperation have been suggested for WSNs in smart grids, highlighting the significance of collaborative fault detection approaches in complex systems (Shao et al., 2017). By integrating model-based algorithms with signal-based techniques, researchers have achieved effective fault detection and isolation for current sensors in various systems (Mollet et al., 2013). Moreover, the advancement of fault-tolerant control systems and fault diagnosis algorithms has been pivotal in addressing sensor faults in different applications, such as wind turbines and gas turbines (Odgaard et al., 2013; Cruz-Manzo et al., 2022). These systems aim to detect, isolate, and accommodate sensor faults in real-time to ensure the continuous operation of critical infrastructure.
 
-In conclusion, sensor fault detection is a multifaceted field that requires a combination of traditional model-based approaches, advanced techniques like EKF and DMD, and the incorporation of physics-informed machine learning to effectively detect and address sensor faults in diverse systems.
+Another approach to sensor fault detection involves the use of physics-informed machine learning techniques. De Silva et al. (2020) discusses the application of a moving average of the innovation covariance to identify anomalous behavior in sensor data. Additionally, the authors mention the utilization of the Dynamic Mode Decomposition (DMD) algorithm for system identification in sensor fault detection, particularly in cases with strongly nonlinear dynamics. DMD is known for extracting coherent spatio-temporal structures from complex data, making it suitable for detecting faults in sensor networks.
+
+On the other hand, Dong et al. (2014) focus on distributed filtering and fault detection in sensor networks. They propose algorithms that enable distributed and localized fault identification by leveraging information from neighboring sensors. The authors also discuss the importance of distributed estimation and fault detection in large-scale networked systems, emphasizing the need to understand the impact of distributed information structures on filtering and fault detection in sensor networks.
+
+Data-driven algorithms are essential for automating the detection process. By employing machine learning methods that approximate the evolution of measurements over time, deviations between actual measurements and estimated values can be utilized to identify anomalous behavior indicative of sensor faults. Integrating other sensor measurements into decision-making processes, such as using a decision tree, can enhance the accuracy of fault detection (de Silva et al., 2020).
+
+In conclusion, sensor fault detection plays a crucial role in maintaining the reliability and performance of sensor networks. Through the utilization of advanced technologies like artificial intelligence, distributed algorithms, and fault-tolerant control systems, as well as by combining physics-informed machine learning techniques with distributed filtering algorithms, researchers aim to develop robust and efficient methods for detecting faults in sensor data, thereby ensuring the integrity and accuracy of sensor networks.
 
 
 ## About the Data
@@ -31,7 +37,7 @@ We define anomalies as large deviations from the rest of the data. Out of the 62
 
 The timestamps in the data are not consistently spaced apart. Earlier timestamps are in 1-hour intervals, but by the end, they are in 5-minute intervals. There are many gaps in between due to sensor disconnection or failure, though particularly large gaps (up to 21 days) are scarce.
 
-This dataset is free to the public on Kaggle and is licensed under Open Database License (ODbL) v1.0 [[1]](https://github.com/XiongCynthia/SensorFaultDetection/tree/main#references).
+This dataset is free to the public on Kaggle and is licensed under Open Database License (ODbL) v1.0 (Möbius, 2020).
 
 
 ## Methods
@@ -117,8 +123,21 @@ In conclusion, our study provides valuable insights into anomaly detection metho
 
 ## References
 
-[1] Möbius (2020). Sensor Fault Detection Data [Dataset]. Schneider-Electric. https://www.kaggle.com/datasets/arashnic/sensor-fault-detection-data
+[1] Brunner, V., Siegl, M., Geier, D., & Becker, T. (2021). Challenges in the development of soft sensors for bioprocesses: a critical review. Frontiers in Bioengineering and Biotechnology, 9. https://doi.org/10.3389/fbioe.2021.722202
 
-[2] Dong, H., Wang, Z., Ding, S., & Gao, H. (2014). A survey on distributed filtering and fault detection for sensor networks. Mathematical Problems in Engineering, 2014, 1-7. https://doi.org/10.1155/2014/858624
+[2] Cruz-Manzo, S., Panov, V., & Bingham, C. (2022). Gas turbine sensor fault diagnostic system in a real-time executable digital-twin.. https://doi.org/10.33737/gpps22-tc-109
 
-[3] Odgaard, P., Stoustrup, J., & Kinnaert, M. (2009). Fault tolerant control of wind turbines – a benchmark model. Ifac Proceedings Volumes, 42(8), 155-160. https://doi.org/10.3182/20090630-4-es-2003.00026
+[3] de Silva, B. M., Callaham, J., Jonker, J., Goebel, N., Klemisch, J., McDonald, D., Hicks, N., Kutz, J. N., Brunton, S. L., & Aravkin, A. Y. (2020, June 23). Physics-informed machine learning for Sensor Fault Detection with Flight Test Data. arXiv.org. https://arxiv.org/abs/2006.13380
+
+[4] Dong, H., Wang, Z., Ding, S., & Gao, H. (2014). A survey on distributed filtering and fault detection for sensor networks. Mathematical Problems in Engineering, 2014, 1-7. https://doi.org/10.1155/2014/858624
+
+[5] Du, X., Chen, J., Zhang, H., & Wang, J. (2022). Fault detection of aero-engine sensor based on inception-cnn. Aerospace, 9(5), 236. https://doi.org/10.3390/aerospace9050236
+
+[6] Möbius (2020). Sensor Fault Detection Data [Dataset]. Schneider-Electric. https://www.kaggle.com/datasets/arashnic/sensor-fault-detection-data
+
+[7] Mollet, Y., Gyselinck, J., & Meinguet, F. (2013). Current sensor fault detection and isolation combining model-based and signal-based algorithms in pmsg drives.. https://doi.org/10.1109/epe.2013.6631961
+
+[8] Odgaard, P., Stoustrup, J., & Kinnaert, M. (2013). Fault-tolerant control of wind turbines: a benchmark model. Ieee Transactions on Control Systems Technology, 21(4), 1168-1182. https://doi.org/10.1109/tcst.2013.2259235
+
+[9] Shao, S., Guo, S., & Qiu, X. (2017). Distributed fault detection based on credibility and cooperation for wsns in smart grids. Sensors, 17(5), 983. https://doi.org/10.3390/s17050983
+
